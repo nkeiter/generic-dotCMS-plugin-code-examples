@@ -30,7 +30,7 @@ jar {
         instruction 'Bundle-DocURL', 'https://github.com/nkeiter/generic-dotCMS-plugin-code-examples'
         instruction 'Bundle-Activator', 'org.example.nkeiter.generic.osgi.Activator'
         instruction 'DynamicImport-Package', '*'
-        instruction 'Import-Package', '*'
+        instruction 'Import-Package', '*;version=0'
     }
 }
 
