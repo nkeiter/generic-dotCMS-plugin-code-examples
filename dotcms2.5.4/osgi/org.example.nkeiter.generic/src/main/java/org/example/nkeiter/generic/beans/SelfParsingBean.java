@@ -8,28 +8,8 @@ import java.util.Map;
 
 public class SelfParsingBean 
 {
-	private String stringField;
 	private double doubleField;
-	
-	public String getMemberId()
-	{
-	    return stringField;
-	}
-
-	public void setMemberId( String stringField )
-	{
-	    this.stringField = stringField;
-	}
-
-	public double getAmountDue()
-	{
-		return doubleField;
-	}
-
-	public void setAmountDue( double doubleField )
-	{
-		this.doubleField = doubleField;
-	}
+	private String stringField;
 	
 	public SelfParsingBean()
 	{
@@ -37,7 +17,7 @@ public class SelfParsingBean
 		this.stringField = "";
 		this.doubleField = 0.0;
 	}
-	
+
 	public SelfParsingBean( String stringField, double doubleField )
 	{
 		super();
@@ -77,5 +57,25 @@ public class SelfParsingBean
 		}
 
 		return selfParsingBeanList;
+	}
+
+	public double getAmountDue()
+	{
+		return doubleField;
+	}
+	
+	public String getMemberId()
+	{
+	    return stringField;
+	}
+	
+	public void setAmountDue( double doubleField )
+	{
+		this.doubleField = doubleField;
+	}
+
+	public void setMemberId( String stringField )
+	{
+	    this.stringField = stringField;
 	}
 }

@@ -13,12 +13,6 @@ import org.example.nkeiter.generic.database.SelfParsingBeanStorage;
 
 public class SelfParsingBeanViewTool implements ViewTool 
 {
-	@Override
-	public void init( Object object ) 
-	{
-
-	}
-
 	/**
 	 * Example to pull one record.
 	 * Usually by primary key field(s)
@@ -81,5 +75,11 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 
 		return list;
+	}
+
+	@Override
+	public void init( Object object ) 
+	{
+
 	}
 }

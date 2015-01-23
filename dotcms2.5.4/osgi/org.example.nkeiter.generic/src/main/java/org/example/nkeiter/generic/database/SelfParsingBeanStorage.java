@@ -1,6 +1,7 @@
 package org.example.nkeiter.generic.database;
 
 import com.dotmarketing.common.db.DotConnect;
+import com.dotmarketing.db.DbConnectionFactory;
 import com.dotmarketing.util.Logger;
 
 import java.util.ArrayList;
@@ -33,6 +34,10 @@ public class SelfParsingBeanStorage
 		catch ( Exception exception )
 		{
 			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int ) ", exception );
+		}
+		finally
+		{
+			DbConnectionFactory.closeConnection();
 		}
 		
 		return list;
