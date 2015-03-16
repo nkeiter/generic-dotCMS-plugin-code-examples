@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: org.example.nkeiter.quartz.job.killer.beans;version="1
+ .0",org.example.nkeiter.quartz.job.killer.configuration;version="1.0"
+ ;uses:="org.example.nkeiter.quartz.job.killer.beans",org.example.nkei
+ ter.quartz.job.killer.osgi;version="1.0";uses:="com.dotmarketing.osgi
+ ,org.osgi.framework"
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: Quartz Job Killer
+Created-By: 1.7.0_25 (Oracle Corporation)
+DynamicImport-Package: *
+Bundle-Vendor: nkeiter
+Bundle-Version: 1.0
+Bnd-LastModified: 1426536861000
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.example.nkeiter.quartz.job.killer.osgi.Activator
+Bundle-Description: nkeiter - Quartz Job Killer
+Bundle-SymbolicName: Quartz Job Killer
+Import-Package: com.dotmarketing.osgi;version=0,com.dotmarketing.util;
+ version=0,org.osgi.framework;version=0,org.quartz;version=0,org.quart
+ z.impl;version=0
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+
