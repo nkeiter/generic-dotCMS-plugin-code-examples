@@ -7,10 +7,12 @@ import org.osgi.framework.BundleContext;
 
 public class Activator extends GenericBundleActivator
 {
+	private static final String PLUGIN_NAME = "Self Parsing Bean ViewTool ($selfParsingBeanViewTool)";
+	
     @Override
     public void start( BundleContext bundleContext ) throws Exception
     {
-		Logger.info( this, "Got to start( BundleContext )" );
+		Logger.info( this, "Got to start( BundleContext ) " + PLUGIN_NAME );
 		
         //Initializing services...
         initializeServices( bundleContext );
@@ -22,7 +24,7 @@ public class Activator extends GenericBundleActivator
     @Override
     public void stop( BundleContext bundleContext ) throws Exception
     {
-		Logger.info( this, "Got to stop( BundleContext )" );
+		Logger.info( this, "Got to stop( BundleContext ) " + PLUGIN_NAME );
 		
         unregisterViewToolServices();
     }
