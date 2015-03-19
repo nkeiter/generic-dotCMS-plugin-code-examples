@@ -19,7 +19,7 @@ public class SelfParsingBeanStorage
 		
 		try
 		{
-			Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
+			//Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
 
 			SelfParsingBean selfParsingBean = new SelfParsingBean();
 			DotConnect dotConnect = new DotConnect();

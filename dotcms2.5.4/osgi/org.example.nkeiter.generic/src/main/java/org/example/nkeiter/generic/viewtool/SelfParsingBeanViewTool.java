@@ -31,7 +31,10 @@ public class SelfParsingBeanViewTool implements ViewTool
 		{
 			list = SelfParsingBeanStorage.getMyDbTableItemByStringDbField( UtilMethods.sqlify( stringField ), 1 );
 
-			selfParsingBean = list.get( 0 );
+			if ( list != null && !list.isEmpty() )
+			{
+				selfParsingBean = list.get( 0 );
+			}
 		}
 		catch ( Exception exception )
 		{
