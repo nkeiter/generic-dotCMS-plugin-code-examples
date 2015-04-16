@@ -10,6 +10,8 @@ import java.util.Map;
 
 import org.example.nkeiter.generic.beans.SelfParsingBean;
 
+import org.json.JSONArray;
+
 public class SelfParsingBeanStorage
 {
 	@SuppressWarnings( "unchecked" )
@@ -29,7 +31,10 @@ public class SelfParsingBeanStorage
 
 			List<Map<String,Object>> results = (List<Map<String,Object>>) dotConnect.loadResults();
 			
-			list = selfParsingBean.createList( results, maxResults );
+			if ( results != null && !results.isEmpty() )
+			{				
+				list = selfParsingBean.createList( results, maxResults );
+			}
 		}
 		catch ( Exception exception )
 		{
@@ -41,5 +46,39 @@ public class SelfParsingBeanStorage
 		}
 		
 		return list;
+	}
+	
+	@SuppressWarnings( "unchecked" )
+	public static JSONArray getMyDbTableItemByStringDbFieldJSON( String stringField, int maxResults )
+	{
+		JSONArray searchResults = new JSONArray();
+		
+		try
+		{
+			//Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )" );
+
+			SelfParsingBean selfParsingBean = new SelfParsingBean();
+			DotConnect dotConnect = new DotConnect();
+			
+			dotConnect.setSQL( SelfParsingBeanSQL.GET_MY_DB_TABLE_ITEM_BY_STRING_DB_FIELD_SQL );
+			dotConnect.addParam( stringField );
+
+			List<Map<String,Object>> results = (List<Map<String,Object>>) dotConnect.loadResults();
+			
+			if ( results != null && !results.isEmpty() )
+			{				
+				searchResults = selfParsingBean.createJSONArray( results, maxResults );
+			}
+		}
+		catch ( Exception exception )
+		{
+			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int ) ", exception );
+		}
+		finally
+		{
+			DbConnectionFactory.closeConnection();
+		}
+		
+		return searchResults;
 	}
 }

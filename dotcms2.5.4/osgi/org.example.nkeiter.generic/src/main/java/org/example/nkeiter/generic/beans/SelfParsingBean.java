@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
+
 public class SelfParsingBean 
 {
 	private double doubleField;
@@ -23,6 +25,11 @@ public class SelfParsingBean
 		super();
 		this.stringField = stringField;
 		this.doubleField = doubleField;
+	}
+
+	public JSONArray createJSONArray( List<Map<String,Object>> objectList, int maxResults )
+	{
+		return new JSONArray( createList( objectList, maxResults ) );
 	}
 
 	public List<SelfParsingBean> createList( List<Map<String,Object>> objectList, int maxResults ) 

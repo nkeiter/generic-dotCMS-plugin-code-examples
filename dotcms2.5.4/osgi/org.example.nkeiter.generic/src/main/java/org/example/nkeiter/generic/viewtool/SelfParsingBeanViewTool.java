@@ -10,6 +10,10 @@ import org.apache.velocity.tools.view.tools.ViewTool;
 
 import org.example.nkeiter.generic.beans.SelfParsingBean;
 import org.example.nkeiter.generic.database.SelfParsingBeanStorage;
+import org.example.nkeiter.generic.key.SelfParsingBeanKey;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class SelfParsingBeanViewTool implements ViewTool 
 {
@@ -78,6 +82,37 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 
 		return list;
+	}
+
+	/**
+	 * Example to pull a list of records.
+	 * Could be no condition, a single condition, or multiple conditions.
+	 * (Single condition shown.)
+	 * Input and output is JSON
+	 * 
+	 * @param stringifiedJSONObject
+	 * @return JSONObject
+	 */
+	public static JSONObject getMyDbTableItemListByStringDbFieldJSON( String stringifiedJSONObject )
+	{
+		JSONObject searchReturn = new JSONObject();
+		JSONArray searchResults = new JSONArray();
+
+		try
+		{
+			JSONObject jsonObject = new JSONObject( stringifiedJSONObject );
+			String stringField = jsonObject.has( SelfParsingBeanKey.STRING_FIELD_KEY ) ? jsonObject.getString( SelfParsingBeanKey.STRING_FIELD_KEY ) : "";
+			int maxResults = jsonObject.has( SelfParsingBeanKey.MAX_RESULTS_FIELD_KEY ) ? jsonObject.getInt( SelfParsingBeanKey.MAX_RESULTS_FIELD_KEY ) : 0;
+			
+			searchResults = SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( UtilMethods.sqlify( stringField ), maxResults );
+			searchReturn.put( SelfParsingBeanKey.SEARCH_RESULTS, searchResults );
+		}
+		catch ( Exception exception )
+		{
+			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbFieldJSON( String ) ", exception );
+		}
+
+		return searchReturn;
 	}
 
 	@Override
