@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Export-Package: org.example.nkeiter.template.viewtool.osgi;version="1.
+ 0";uses:="com.dotmarketing.osgi,org.apache.velocity.tools.view.servle
+ t,org.osgi.framework",org.example.nkeiter.template.viewtool.viewtool;
+ version="1.0";uses:="com.dotmarketing.portlets.templates.model,org.ap
+ ache.velocity.tools.view.tools"
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: Template ViewTool ($templateViewTool)
+Created-By: 1.7.0_25 (Oracle Corporation)
+DynamicImport-Package: *
+Bundle-Vendor: nkeiter
+Bundle-Version: 1.0
+Bnd-LastModified: 1457646353000
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.example.nkeiter.template.viewtool.osgi.Activator
+Bundle-Description: nkeiter - Template ViewTool ($templateViewTool)
+Bundle-SymbolicName: Template ViewTool ($templateViewTool)
+Import-Package: com.dotmarketing.business;version=0,com.dotmarketing.o
+ sgi;version=0,com.dotmarketing.portlets.templates.business;version=0,
+ com.dotmarketing.portlets.templates.model;version=0,com.dotmarketing.
+ util;version=0,com.liferay.portal.model;version=0,org.apache.velocity
+ .tools.view;version=0,org.apache.velocity.tools.view.servlet;version=
+ 0,org.apache.velocity.tools.view.tools;version=0,org.osgi.framework;v
+ ersion=0
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+
