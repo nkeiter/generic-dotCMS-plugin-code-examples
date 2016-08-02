@@ -6,7 +6,6 @@ apply plugin: 'eclipse'
 sourceCompatibility = '1.7'
 version = '1.0'
 
-
 repositories {
 	maven {
 		url "http://repo.dotcms.com/artifactory/libs-release"
@@ -37,4 +36,3 @@ jar {
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.1'
 }
-

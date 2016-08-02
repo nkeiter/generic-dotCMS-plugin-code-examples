@@ -1,29 +1,32 @@
 Manifest-Version: 1.0
-Export-Package: org.example.nkeiter.generic.beans;version="1.0",org.ex
- ample.nkeiter.generic.database;version="1.0";uses:="org.example.nkeit
- er.generic.beans",org.example.nkeiter.generic.osgi;version="1.0";uses
- :="com.dotmarketing.osgi,org.apache.velocity.tools.view.servlet,org.o
- sgi.framework",org.example.nkeiter.generic.viewtool;version="1.0";use
- s:="org.apache.velocity.tools.view.tools,org.example.nkeiter.generic.
- beans"
-Tool: Bnd-2.1.0.20130426-122213
-Bundle-Name: Self Parsing Bean ViewTool ($selfParsingBeanViewTool)
-Created-By: 1.7.0_25 (Oracle Corporation)
-DynamicImport-Package: *
-Bundle-Vendor: nkeiter
-Bundle-Version: 1.0
-Bnd-LastModified: 1426009629000
-Bundle-ManifestVersion: 2
-Bundle-Activator: org.example.nkeiter.generic.osgi.Activator
 Bundle-Description: nkeiter - Self Parsing Bean ViewTool ($selfParsing
  BeanViewTool)
 Bundle-SymbolicName: Self Parsing Bean ViewTool ($selfParsingBeanViewT
  ool)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1426009629000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
 Import-Package: com.dotmarketing.common.db;version=0,com.dotmarketing.
  db;version=0,com.dotmarketing.osgi;version=0,com.dotmarketing.util;ve
  rsion=0,org.apache.velocity.tools.view;version=0,org.apache.velocity.
- tools.view.servlet;version=0,org.apache.velocity.tools.view.tools;ver
- sion=0,org.osgi.framework;version=0
-Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
- xamples
+ tools.view.context;version=0,org.apache.velocity.tools.view.servlet;v
+ ersion=0,org.apache.velocity.tools.view.tools;version=0,org.osgi.fram
+ ework;version=0
+DynamicImport-Package: *
+Tool: Bnd-2.1.0.20130426-122213
+Export-Package: org.example.nkeiter.generic.beans;version="1.0";uses:=
+ "org.json",org.example.nkeiter.generic.database;version="1.0";uses:="
+ org.example.nkeiter.generic.beans,org.json",org.example.nkeiter.gener
+ ic.key;version="1.0",org.example.nkeiter.generic.osgi;version="1.0";u
+ ses:="com.dotmarketing.osgi,org.apache.velocity.tools.view.servlet,or
+ g.osgi.framework",org.example.nkeiter.generic.viewtool;version="1.0";
+ uses:="org.apache.velocity.tools.view.tools,org.example.nkeiter.gener
+ ic.beans,org.json",org.json;version="1.0",org.json.zip;version="1.0";
+ uses:="org.json"
+Bundle-Name: Self Parsing Bean ViewTool ($selfParsingBeanViewTool)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.generic.osgi.Activator
+Created-By: 1.8.0_91 (Oracle Corporation)
 

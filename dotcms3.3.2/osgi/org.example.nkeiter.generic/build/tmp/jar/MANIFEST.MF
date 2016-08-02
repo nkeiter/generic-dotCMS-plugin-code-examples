@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-Description: nkeiter - Self Parsing Bean ViewTool ($selfParsing
+ BeanViewTool)
+Bundle-SymbolicName: Self Parsing Bean ViewTool ($selfParsingBeanViewT
+ ool)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1463502550000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
+Import-Package: com.dotcms.repackage.org.apache.logging.log4j;version=
+ 0,com.dotcms.repackage.org.apache.logging.log4j.core;version=0,com.do
+ tcms.repackage.org.apache.logging.log4j.spi;version=0,com.dotcms.repa
+ ckage.org.osgi.framework;version=0,com.dotmarketing.common.db;version
+ =0,com.dotmarketing.db;version=0,com.dotmarketing.loggers;version=0,c
+ om.dotmarketing.osgi;version=0,com.dotmarketing.util;version=0,org.ap
+ ache.velocity.tools.view;version=0,org.apache.velocity.tools.view.con
+ text;version=0,org.apache.velocity.tools.view.servlet;version=0,org.a
+ pache.velocity.tools.view.tools;version=0
+DynamicImport-Package: *
+Tool: Bnd-2.1.0.20130426-122213
+Export-Package: org.example.nkeiter.generic.beans;version="1.0";uses:=
+ "org.json",org.example.nkeiter.generic.database;version="1.0";uses:="
+ org.example.nkeiter.generic.beans,org.json",org.example.nkeiter.gener
+ ic.key;version="1.0",org.example.nkeiter.generic.osgi;version="1.0";u
+ ses:="com.dotcms.repackage.org.osgi.framework,com.dotmarketing.osgi,o
+ rg.apache.velocity.tools.view.servlet",org.example.nkeiter.generic.vi
+ ewtool;version="1.0";uses:="org.apache.velocity.tools.view.tools,org.
+ example.nkeiter.generic.beans,org.json",org.json;version="1.0",org.js
+ on.zip;version="1.0";uses:="org.json"
+Bundle-Name: Self Parsing Bean ViewTool ($selfParsingBeanViewTool)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.generic.osgi.Activator
+Created-By: 1.8.0_91 (Oracle Corporation)
+
