@@ -5,7 +5,7 @@
 	<!-- Find all the "CHANGE ME!" blocks. -->
 	<!-- Edit as desired. -->
 	<!-- At minimum, change the NAME attribute of the LOGGER object, -->
-	<!-- as this controls the package/class name filtering to your appender. Line #217 -->
+	<!-- as this controls the package/class name filtering to your appender. Line #217, #223, #229 -->
 	<!-- You should also change the log file name to something relevant. Line #20, #21 -->
 	<!-- You may add as many custom loggers as you like. -->
 
@@ -214,7 +214,19 @@
 		<!-- ***** Define the logger filter properties. ***** -->
 		<!-- Any class with a base package root of "org.example.nkeiter" will -->
 		<!-- be passed to the "example" appender. Set logger level as desired. -->
-		<Logger name="org.example.nkeiter" level="debug" additivity="false">
+		<Logger name="org.example.nkeiter" level="info" additivity="false">
+			<AppenderRef ref="example"/>
+		</Logger>
+
+		<!-- This is how you would divert core class logging to your custom log. -->
+		<!-- Useful if you have a static core override plugin in place. -->
+		<Logger name="com.dotmarketing.factories.EmailFactory" level="info" additivity="false">
+			<AppenderRef ref="example"/>
+		</Logger>
+
+		<!-- This is how you would divert core class logging to your custom log. -->
+		<!-- Useful if you have a static core override plugin in place. -->
+		<Logger name="com.dotmarketing.util.Mailer" level="info" additivity="false">
 			<AppenderRef ref="example"/>
 		</Logger>
 
