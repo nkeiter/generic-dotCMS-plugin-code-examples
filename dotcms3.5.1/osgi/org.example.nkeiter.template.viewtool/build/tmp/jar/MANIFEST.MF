@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-Description: nkeiter - Template ViewTool ($templateViewTool)
+Bundle-SymbolicName: Template ViewTool ($templateViewTool)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1472589256000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
+Import-Package: com.dotcms.repackage.org.apache.logging.log4j;version=
+ 0,com.dotcms.repackage.org.apache.logging.log4j.core;version=0,com.do
+ tcms.repackage.org.apache.logging.log4j.spi;version=0,com.dotcms.repa
+ ckage.org.osgi.framework;version=0,com.dotmarketing.business;version=
+ 0,com.dotmarketing.loggers;version=0,com.dotmarketing.osgi;version=0,
+ com.dotmarketing.portlets.templates.business;version=0,com.dotmarketi
+ ng.portlets.templates.model;version=0,com.dotmarketing.util;version=0
+ ,com.liferay.portal.model;version=0,org.apache.velocity.tools.view;ve
+ rsion=0,org.apache.velocity.tools.view.servlet;version=0,org.apache.v
+ elocity.tools.view.tools;version=0,org.example.nkeiter.template.viewt
+ ool.viewtool;version=0
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+DynamicImport-Package: *
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.example.nkeiter.template.viewtool.osgi;version="1.
+ 0";uses:="com.dotcms.repackage.org.osgi.framework,com.dotmarketing.os
+ gi,org.apache.velocity.tools.view.servlet",org.example.nkeiter.templa
+ te.viewtool.viewtool;version="1.0";uses:="com.dotmarketing.portlets.t
+ emplates.model,org.apache.velocity.tools.view.tools"
+Bundle-Name: Template ViewTool ($templateViewTool)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.template.viewtool.osgi.Activator
+Created-By: 1.8.0_91 (Oracle Corporation)
+

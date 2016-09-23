@@ -1,0 +1,38 @@
+apply plugin: 'application'
+apply plugin: 'osgi'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+
+sourceCompatibility = '1.8'
+version = '1.0'
+
+repositories {
+	maven {
+		url "http://repo.dotcms.com/artifactory/libs-release"
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'src/main/resources/libs', include: '*.jar')
+	compile (group: 'com.dotcms', name: 'dotcms', version: '3.5.1'){
+		transitive = true
+	}
+	providedCompile "javax.servlet:servlet-api:2.5"
+}
+
+jar {
+	manifest {
+		name = 'Template ViewTool ($templateViewTool)'
+		symbolicName = 'Template ViewTool ($templateViewTool)'
+		instruction 'Bundle-Vendor', 'nkeiter'
+		instruction 'Bundle-Description', 'nkeiter - Template ViewTool ($templateViewTool)'
+		instruction 'Bundle-DocURL', 'https://github.com/nkeiter/generic-dotCMS-plugin-code-examples'
+		instruction 'Bundle-Activator', 'org.example.nkeiter.template.viewtool.osgi.Activator'
+		instruction 'DynamicImport-Package', '*'
+		instruction 'Import-Package', '*;version=0'
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.0'
+}
