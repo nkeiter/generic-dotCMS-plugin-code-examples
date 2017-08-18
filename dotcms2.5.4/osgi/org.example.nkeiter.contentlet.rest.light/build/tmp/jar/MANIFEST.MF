@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Bundle-Description: nkeiter - Contentlet Rest Service Light (/api/cont
+ entletLight)
+Bundle-SymbolicName: Contentlet Rest Service Light (/api/contentletLig
+ ht)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1503066058000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
+Import-Package: com.dotcms.rest;version=0,com.dotcms.rest.config;versi
+ on=0,com.dotcms.rest.exception;version=0,com.dotmarketing.business;ve
+ rsion=0,com.dotmarketing.business.web;version=0,com.dotmarketing.cms.
+ factories;version=0,com.dotmarketing.cms.login.factories;version=0,co
+ m.dotmarketing.osgi;version=0,com.dotmarketing.portlets.contentlet.bu
+ siness;version=0,com.dotmarketing.portlets.contentlet.model;version=0
+ ,com.dotmarketing.portlets.languagesmanager.business;version=0,com.do
+ tmarketing.portlets.languagesmanager.model;version=0,com.dotmarketing
+ .portlets.structure.model;version=0,com.dotmarketing.util;version=0,c
+ om.dotmarketing.util.json;version=0,com.dotmarketing.viewtools.conten
+ t.util;version=0,com.liferay.portal.model;version=0,com.sun.jersey.co
+ re.util;version=0,javax.servlet.http;version=0,javax.ws.rs;version=0,
+ javax.ws.rs.core;version=0,org.example.nkeiter.contentlet.rest.light.
+ beans;version=0,org.example.nkeiter.contentlet.rest.light.rest;versio
+ n=0,org.example.nkeiter.contentlet.rest.light.service;version=0,org.o
+ sgi.framework;version=0
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+DynamicImport-Package: *
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.example.nkeiter.contentlet.rest.light.beans;versio
+ n="1.0";uses:="com.dotcms.rest,com.liferay.portal.model",org.example.
+ nkeiter.contentlet.rest.light.osgi;version="1.0";uses:="com.dotmarket
+ ing.osgi,org.osgi.framework",org.example.nkeiter.contentlet.rest.ligh
+ t.rest;version="1.0";uses:="com.dotcms.rest,com.dotcms.rest.exception
+ ,javax.servlet.http",org.example.nkeiter.contentlet.rest.light.servic
+ e;version="1.0";uses:="com.dotmarketing.util.json,javax.servlet.http,
+ javax.ws.rs,javax.ws.rs.core,org.example.nkeiter.contentlet.rest.ligh
+ t.rest"
+Bundle-Name: Contentlet Rest Service Light (/api/contentletLight)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.contentlet.rest.light.osgi.Activ
+ ator
+Created-By: 1.8.0_121 (Oracle Corporation)
+
