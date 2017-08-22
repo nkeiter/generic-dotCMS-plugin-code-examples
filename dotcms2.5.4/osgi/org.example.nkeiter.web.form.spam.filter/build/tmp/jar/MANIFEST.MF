@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-Description: nkeiter - Web Form Spam Filter Servlet (/dotCMS/su
+ bmitWebForm /dotCMS/sendEmail)
+Bundle-SymbolicName: Web Form Spam Filter Servlet (/dotCMS/submitWebFo
+ rm /dotCMS/sendEmail)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1503435330000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
+Import-Package: com.dotmarketing.cms.webforms.action;version=0,com.dot
+ marketing.osgi;version=0,com.dotmarketing.util;version=0,javax.servle
+ t;version=0,javax.servlet.http;version=0,org.apache.felix.http.api;ve
+ rsion=0,org.apache.struts.action;version=0,org.apache.struts.config;v
+ ersion=0,org.example.nkeiter.web.form.spam.filter.beans;version=0,org
+ .example.nkeiter.web.form.spam.filter.business;version=0,org.example.
+ nkeiter.web.form.spam.filter.key;version=0,org.example.nkeiter.web.fo
+ rm.spam.filter.servlet;version=0,org.osgi.framework;version=0,org.osg
+ i.service.http;version=0
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+DynamicImport-Package: *
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.example.nkeiter.web.form.spam.filter.beans;version
+ ="1.0",org.example.nkeiter.web.form.spam.filter.business;version="1.0
+ ";uses:="javax.servlet.http,org.example.nkeiter.web.form.spam.filter.
+ beans",org.example.nkeiter.web.form.spam.filter.key;version="1.0",org
+ .example.nkeiter.web.form.spam.filter.osgi;version="1.0";uses:="com.d
+ otmarketing.osgi,org.osgi.framework",org.example.nkeiter.web.form.spa
+ m.filter.servlet;version="1.0";uses:="javax.servlet,javax.servlet.htt
+ p"
+Bundle-Name: Web Form Spam Filter Servlet (/dotCMS/submitWebForm /dotC
+ MS/sendEmail)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.web.form.spam.filter.osgi.Activa
+ tor
+Created-By: 1.8.0_121 (Oracle Corporation)
+
