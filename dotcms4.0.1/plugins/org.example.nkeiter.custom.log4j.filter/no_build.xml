@@ -1,0 +1,5 @@
+<project name="org.example.nkeiter.custom.log4j.filter" default="build">
+
+	<import file="../common.xml"/>
+
+</project>

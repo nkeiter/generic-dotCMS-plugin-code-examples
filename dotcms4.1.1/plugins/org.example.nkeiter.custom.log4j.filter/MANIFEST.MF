@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Plugin-Name: Example Custom log4j Filter
+Plugin-Version: 1
+Author: nkeiter
