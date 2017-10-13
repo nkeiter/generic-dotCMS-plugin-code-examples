@@ -1,5 +1,7 @@
 package org.example.nkeiter.contentlet.rest.light.service;
 
+import com.dotcms.contenttype.business.ContentTypeAPI;
+import com.dotcms.contenttype.model.type.ContentType;
 import com.dotcms.repackage.javax.ws.rs.GET;
 import com.dotcms.repackage.javax.ws.rs.Path;
 import com.dotcms.repackage.javax.ws.rs.PathParam;
@@ -10,14 +12,16 @@ import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.annotation.NoCache;
 
 import com.dotmarketing.business.APILocator;
+import com.dotmarketing.business.UserAPI;
 import com.dotmarketing.portlets.contentlet.model.Contentlet;
-import com.dotmarketing.portlets.structure.model.Structure;
+//import com.dotmarketing.portlets.structure.model.Structure;
 import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 import com.dotmarketing.util.json.JSONArray;
 import com.dotmarketing.util.json.JSONException;
 import com.dotmarketing.util.json.JSONObject;
 import com.dotmarketing.viewtools.content.util.ContentUtils;
+import com.liferay.portal.model.User;
 
 import org.example.nkeiter.contentlet.rest.light.beans.FieldFilter;
 import org.example.nkeiter.contentlet.rest.light.beans.RestOptions;
@@ -57,9 +61,23 @@ public class ContentletRestServiceLight extends BasicRestService
 
 		try
 		{
-			Structure structure = contentlet.getStructure();
+			// dotCMS API's
+			// 4.x code
+			UserAPI userAPI = APILocator.getUserAPI();
+			User systemUser = userAPI.getSystemUser();
+			ContentTypeAPI contentTypeAPI = APILocator.getContentTypeAPI( systemUser );
 
-			jsonObject.put( "structure", structure.getVelocityVarName() );
+			// 4.x code
+			ContentType contentType = contentTypeAPI.find( contentlet.getContentTypeId() );
+			String contentTypeVariable = contentType.variable();
+
+			// 3.x code
+			//Structure contentType = contentlet.getStructure();
+
+			// 3.x code
+			//String contentTypeVariable = contentType.getVelocityVarName();
+
+			jsonObject.put( "structure", contentTypeVariable );
 
 			for ( String key : contentlet.getMap().keySet() )
 			{
