@@ -1,12 +1,11 @@
 package org.example.nkeiter.generic.beans;
 
+import com.dotmarketing.util.json.JSONArray;
 import com.dotmarketing.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import org.json.JSONArray;
 
 public class SelfParsingBean 
 {

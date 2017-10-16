@@ -1,5 +1,7 @@
 package org.example.nkeiter.generic.viewtool;
 
+import com.dotmarketing.util.json.JSONArray;
+import com.dotmarketing.util.json.JSONObject;
 import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 
@@ -11,9 +13,6 @@ import org.apache.velocity.tools.view.tools.ViewTool;
 import org.example.nkeiter.generic.beans.SelfParsingBean;
 import org.example.nkeiter.generic.database.SelfParsingBeanStorage;
 import org.example.nkeiter.generic.key.SelfParsingBeanKey;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class SelfParsingBeanViewTool implements ViewTool
 {

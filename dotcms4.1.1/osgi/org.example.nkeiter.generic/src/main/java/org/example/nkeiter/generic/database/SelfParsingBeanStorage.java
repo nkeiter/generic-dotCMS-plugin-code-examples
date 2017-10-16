@@ -2,6 +2,7 @@ package org.example.nkeiter.generic.database;
 
 import com.dotmarketing.common.db.DotConnect;
 import com.dotmarketing.db.DbConnectionFactory;
+import com.dotmarketing.util.json.JSONArray;
 import com.dotmarketing.util.Logger;
 
 import java.util.ArrayList;
@@ -9,8 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.example.nkeiter.generic.beans.SelfParsingBean;
-
-import org.json.JSONArray;
 
 public class SelfParsingBeanStorage
 {
