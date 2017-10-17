@@ -1,10 +1,9 @@
 package org.example.nkeiter.generic.osgi;
 
-//import com.dotmarketing.util.Logger;
-
 import org.apache.velocity.tools.view.context.ViewContext;
 import org.apache.velocity.tools.view.servlet.ServletToolInfo;
 
+import org.example.nkeiter.generic.log.Logger;
 import org.example.nkeiter.generic.viewtool.SelfParsingBeanViewTool;
 
 public class SelfParsingBeanViewToolInfo extends ServletToolInfo
@@ -12,7 +11,7 @@ public class SelfParsingBeanViewToolInfo extends ServletToolInfo
 	@Override
 	public String getClassname()
 	{
-		//Logger.info( this, "Got to getClassname()" );
+		Logger.info( this, "Got to getClassname()" );
 
 		return SelfParsingBeanViewTool.class.getName();
 	}
@@ -41,7 +40,7 @@ public class SelfParsingBeanViewToolInfo extends ServletToolInfo
 	@Override
 	public String getScope()
 	{
-		//Logger.info( this, "Got to getScope()" );
+		Logger.info( this, "Got to getScope()" );
 
 		return ViewContext.REQUEST;
 	}

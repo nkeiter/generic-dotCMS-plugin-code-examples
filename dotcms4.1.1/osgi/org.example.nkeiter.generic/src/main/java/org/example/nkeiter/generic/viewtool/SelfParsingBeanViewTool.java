@@ -2,7 +2,6 @@ package org.example.nkeiter.generic.viewtool;
 
 import com.dotmarketing.util.json.JSONArray;
 import com.dotmarketing.util.json.JSONObject;
-import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 
 import java.util.ArrayList;
@@ -13,6 +12,7 @@ import org.apache.velocity.tools.view.tools.ViewTool;
 import org.example.nkeiter.generic.beans.SelfParsingBean;
 import org.example.nkeiter.generic.database.SelfParsingBeanStorage;
 import org.example.nkeiter.generic.key.SelfParsingBeanKey;
+import org.example.nkeiter.generic.log.Logger;
 
 public class SelfParsingBeanViewTool implements ViewTool
 {
@@ -42,7 +42,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemByStringDbField( String ) ", exception );
+			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemByStringDbField( String )", exception );
 		}
 
 		return selfParsingBean;
@@ -78,7 +78,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbField( String, int ) ", exception );
+			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbField( String, int )", exception );
 		}
 
 		return list;
@@ -109,7 +109,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbFieldJSON( String ) ", exception );
+			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbFieldJSON( String )", exception );
 		}
 
 		return searchReturn;

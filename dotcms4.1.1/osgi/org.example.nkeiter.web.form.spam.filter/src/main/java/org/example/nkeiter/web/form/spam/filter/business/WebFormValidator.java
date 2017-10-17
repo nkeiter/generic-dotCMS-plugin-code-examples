@@ -1,13 +1,12 @@
 package org.example.nkeiter.web.form.spam.filter.business;
 
-import com.dotmarketing.util.Logger;
-
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.example.nkeiter.web.form.spam.filter.beans.WebFormValidatorBean;
 import org.example.nkeiter.web.form.spam.filter.key.WebFormKey;
+import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormValidator
 {
@@ -54,7 +53,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.isValidWebForm( HttpServletRequest ) ", exception );
+			Logger.error( WebFormValidator.class, "WebFormValidator.isValidWebForm( HttpServletRequest )", exception );
 
 			webFormValidatorBean.setValid( false );
 			webFormValidatorBean.setReason( "Exception: " + exception + "." );
@@ -90,7 +89,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String ) ", exception );
+			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}
@@ -119,7 +118,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String ) ", exception );
+			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}
@@ -157,7 +156,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkFieldGroup( HashMap<String, Object>, String ) ", exception );
+			Logger.error( WebFormValidator.class, "WebFormValidator.checkFieldGroup( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}

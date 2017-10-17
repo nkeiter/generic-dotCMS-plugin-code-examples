@@ -1,11 +1,12 @@
 package org.example.nkeiter.generic.beans;
 
 import com.dotmarketing.util.json.JSONArray;
-import com.dotmarketing.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import org.example.nkeiter.generic.log.Logger;
 
 public class SelfParsingBean 
 {
@@ -60,7 +61,7 @@ public class SelfParsingBean
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBean.class, "SelfParsingBean.createList( List<Map<String,Object>>, int ) ", exception );
+			Logger.error( SelfParsingBean.class, "SelfParsingBean.createList( List<Map<String,Object>>, int )", exception );
 		}
 
 		return selfParsingBeanList;

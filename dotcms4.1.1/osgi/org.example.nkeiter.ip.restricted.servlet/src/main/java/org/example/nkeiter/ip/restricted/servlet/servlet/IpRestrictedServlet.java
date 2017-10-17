@@ -1,7 +1,5 @@
 package org.example.nkeiter.ip.restricted.servlet.servlet;
 
-import com.dotmarketing.util.Logger;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.example.nkeiter.ip.restricted.servlet.log.Logger;
 
 public class IpRestrictedServlet extends HttpServlet 
 {
@@ -32,13 +32,13 @@ public class IpRestrictedServlet extends HttpServlet
 
 	public IpRestrictedServlet()
 	{
-		//Logger.info( this, "Got to IpRestrictedServlet()" );
+		Logger.info( this, "Got to IpRestrictedServlet()" );
 	}
 
 	@Override
 	public void destroy()
 	{
-		//Logger.info( this, "Got to IpRestrictedServlet.destroy()" );
+		Logger.info( this, "Got to IpRestrictedServlet.destroy()" );
 
 		super.destroy();
 	}
@@ -46,7 +46,7 @@ public class IpRestrictedServlet extends HttpServlet
 	@Override
 	public void init( ServletConfig servletConfig ) throws ServletException
 	{
-		//Logger.info( this, "Got to IpRestrictedServlet.init( ServletConfig ) [" + servletConfig + "]" );
+		Logger.info( this, "Got to IpRestrictedServlet.init( ServletConfig )" );
 
 		super.init( servletConfig );  
 	}
@@ -54,7 +54,7 @@ public class IpRestrictedServlet extends HttpServlet
 	@Override
 	public void service( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse )
 	{
-		//Logger.info( this, "Got to IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse )" );
+		Logger.info( this, "Got to IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse )" );
 
 		try
 		{
@@ -74,7 +74,7 @@ public class IpRestrictedServlet extends HttpServlet
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( this, "IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse ) ", exception );
+			Logger.error( this, "IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse )", exception );
 		}
 
 	}

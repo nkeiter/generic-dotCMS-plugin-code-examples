@@ -15,7 +15,6 @@ import com.dotmarketing.business.APILocator;
 import com.dotmarketing.business.UserAPI;
 import com.dotmarketing.portlets.contentlet.model.Contentlet;
 //import com.dotmarketing.portlets.structure.model.Structure;
-import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 import com.dotmarketing.util.json.JSONArray;
 import com.dotmarketing.util.json.JSONException;
@@ -23,14 +22,15 @@ import com.dotmarketing.util.json.JSONObject;
 import com.dotmarketing.viewtools.content.util.ContentUtils;
 import com.liferay.portal.model.User;
 
-import org.example.nkeiter.contentlet.rest.light.beans.FieldFilter;
-import org.example.nkeiter.contentlet.rest.light.beans.RestOptions;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.example.nkeiter.contentlet.rest.light.beans.FieldFilter;
+import org.example.nkeiter.contentlet.rest.light.beans.RestOptions;
+import org.example.nkeiter.contentlet.rest.light.log.Logger;
 
 /**
  * Pass a query

@@ -4,11 +4,12 @@ import com.dotmarketing.business.APILocator;
 import com.dotmarketing.business.UserAPI;
 import com.dotmarketing.portlets.templates.business.TemplateAPI;
 import com.dotmarketing.portlets.templates.model.Template;
-import com.dotmarketing.util.Logger;
 
 import com.liferay.portal.model.User;
 
 import org.apache.velocity.tools.view.tools.ViewTool;
+
+import org.example.nkeiter.template.viewtool.log.Logger;
 
 public class TemplateViewTool implements ViewTool
 {
@@ -32,7 +33,7 @@ public class TemplateViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( TemplateViewTool.class, "TemplateViewTool.getTemplate( String ) ", exception );
+			Logger.error( TemplateViewTool.class, "TemplateViewTool.getTemplate( String )", exception );
 		}
 
 		return template;

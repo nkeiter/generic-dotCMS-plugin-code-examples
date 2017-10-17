@@ -4,7 +4,7 @@ Bundle-Description: nkeiter - Contentlet Rest Service Light (/api/cont
 Bundle-SymbolicName: Contentlet Rest Service Light (/api/contentletLig
  ht)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1505311258000
+Bnd-LastModified: 1508254921000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter
@@ -23,18 +23,21 @@ Import-Package: com.dotcms.contenttype.business;version=0,com.dotcms.c
  0,com.dotmarketing.util.json;version=0,com.dotmarketing.viewtools.con
  tent.util;version=0,com.liferay.portal.model;version=0,javax.servlet.
  http;version=0,org.example.nkeiter.contentlet.rest.light.beans;versio
- n=0,org.example.nkeiter.contentlet.rest.light.service;version=0,org.o
- sgi.framework;version=0
+ n=0,org.example.nkeiter.contentlet.rest.light.log;version=0,org.examp
+ le.nkeiter.contentlet.rest.light.service;version=0,org.osgi.framework
+ ;version=0
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 DynamicImport-Package: *
 Tool: Bnd-3.2.0.201605172007
 Export-Package: org.example.nkeiter.contentlet.rest.light.beans;versio
  n="1.0";uses:="com.dotcms.rest,com.liferay.portal.model",org.example.
- nkeiter.contentlet.rest.light.osgi;version="1.0";uses:="com.dotmarket
- ing.osgi,org.osgi.framework",org.example.nkeiter.contentlet.rest.ligh
- t.service;version="1.0";uses:="com.dotcms.repackage.javax.ws.rs,com.d
- otcms.repackage.javax.ws.rs.core,com.dotcms.rest,com.dotcms.rest.anno
- tation,com.dotmarketing.util.json,javax.servlet.http"
+ nkeiter.contentlet.rest.light.log;version="1.0";uses:="com.dotmarketi
+ ng.util",org.example.nkeiter.contentlet.rest.light.osgi;version="1.0"
+ ;uses:="com.dotmarketing.osgi,org.osgi.framework",org.example.nkeiter
+ .contentlet.rest.light.service;version="1.0";uses:="com.dotcms.repack
+ age.javax.ws.rs,com.dotcms.repackage.javax.ws.rs.core,com.dotcms.rest
+ ,com.dotcms.rest.annotation,com.dotmarketing.util.json,javax.servlet.
+ http"
 Bundle-Name: Contentlet Rest Service Light (/api/contentletLight)
 Bundle-Version: 1.0
 Bundle-Activator: org.example.nkeiter.contentlet.rest.light.osgi.Activ

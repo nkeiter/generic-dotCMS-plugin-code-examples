@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-Description: nkeiter - Quartz Job Killer
 Bundle-SymbolicName: Quartz Job Killer
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1505311298000
+Bnd-LastModified: 1508254947000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

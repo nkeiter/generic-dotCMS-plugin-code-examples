@@ -1,7 +1,5 @@
 package org.example.nkeiter.web.form.spam.filter.servlet;
 
-import com.dotmarketing.util.Logger;
-
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -15,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.example.nkeiter.web.form.spam.filter.beans.WebFormValidatorBean;
 import org.example.nkeiter.web.form.spam.filter.business.WebFormValidator;
+import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormServletFilter implements Filter
 {
@@ -23,13 +22,13 @@ public class WebFormServletFilter implements Filter
 
 	public WebFormServletFilter()
 	{
-		//Logger.info( this, "Got to WebFormServletFilter()" );
+		Logger.info( this, "Got to WebFormServletFilter()" );
 	}
 
 	@Override
 	public void destroy()
 	{
-		//Logger.info( this, "Got to destroy()" );
+		Logger.info( this, "Got to destroy()" );
 	}
 
 	@Override
@@ -86,7 +85,7 @@ public class WebFormServletFilter implements Filter
 	@Override
 	public void init( FilterConfig filterConfig ) throws ServletException
 	{
-		//Logger.info( this, "Got to init( FilterConfig ) with config [" + filterConfig + "]" );
+		Logger.info( this, "Got to init( FilterConfig )" );
 	}
 
 	protected void setOriginalEndpoint( String originalEndpoint )

@@ -5,7 +5,6 @@ import com.dotcms.repackage.org.apache.struts.action.ActionMapping;
 import com.dotcms.repackage.org.apache.struts.config.ForwardConfig;
 
 import com.dotmarketing.cms.webforms.action.SubmitWebFormAction;
-import com.dotmarketing.util.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -13,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormServlet extends HttpServlet
 {
@@ -23,13 +24,13 @@ public class WebFormServlet extends HttpServlet
 
 	public WebFormServlet()
 	{
-		//Logger.info( this, "Got to WebFormServlet()" );
+		Logger.info( this, "Got to WebFormServlet()" );
 	}
 
 	@Override
 	public void destroy()
 	{
-		//Logger.info( this, "Got to WebFormServlet.destroy()" );
+		Logger.info( this, "Got to WebFormServlet.destroy()" );
 
 		super.destroy();
 	}
@@ -37,7 +38,7 @@ public class WebFormServlet extends HttpServlet
 	@Override
 	public void init( ServletConfig servletConfig ) throws ServletException
 	{
-		//Logger.info( this, "Got to WebFormServlet.init( ServletConfig ) [" + servletConfig + "]" );
+		Logger.info( this, "Got to WebFormServlet.init( ServletConfig )" );
 
 		super.init( servletConfig );
 	}

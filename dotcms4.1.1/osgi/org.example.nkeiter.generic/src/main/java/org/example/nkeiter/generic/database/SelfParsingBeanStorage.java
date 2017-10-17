@@ -3,13 +3,13 @@ package org.example.nkeiter.generic.database;
 import com.dotmarketing.common.db.DotConnect;
 import com.dotmarketing.db.DbConnectionFactory;
 import com.dotmarketing.util.json.JSONArray;
-import com.dotmarketing.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.example.nkeiter.generic.beans.SelfParsingBean;
+import org.example.nkeiter.generic.log.Logger;
 
 public class SelfParsingBeanStorage
 {
@@ -20,7 +20,7 @@ public class SelfParsingBeanStorage
 
 		try
 		{
-			//Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
+			Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
 
 			SelfParsingBean selfParsingBean = new SelfParsingBean();
 			DotConnect dotConnect = new DotConnect();
@@ -39,7 +39,7 @@ public class SelfParsingBeanStorage
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int ) ", exception );
+			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )", exception );
 		}
 		finally
 		{
@@ -56,7 +56,7 @@ public class SelfParsingBeanStorage
 
 		try
 		{
-			//Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )" );
+			Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )" );
 
 			SelfParsingBean selfParsingBean = new SelfParsingBean();
 			DotConnect dotConnect = new DotConnect();
@@ -75,7 +75,7 @@ public class SelfParsingBeanStorage
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int ) ", exception );
+			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )", exception );
 		}
 		finally
 		{

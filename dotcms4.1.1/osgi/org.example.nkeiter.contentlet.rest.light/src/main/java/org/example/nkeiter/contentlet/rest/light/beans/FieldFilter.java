@@ -1,10 +1,11 @@
 package org.example.nkeiter.contentlet.rest.light.beans;
 
-import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.example.nkeiter.contentlet.rest.light.log.Logger;
 
 /**
  * include fields filter

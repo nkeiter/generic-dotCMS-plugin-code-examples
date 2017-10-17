@@ -3,16 +3,16 @@ package org.example.nkeiter.contentlet.rest.light.beans;
 import com.dotcms.rest.InitDataObject;
 import com.dotmarketing.business.APILocator;
 import com.dotmarketing.portlets.languagesmanager.business.LanguageAPI;
-import com.dotmarketing.util.Logger;
 import com.dotmarketing.util.UtilMethods;
 
 import com.liferay.portal.model.User;
 
-import org.example.nkeiter.contentlet.rest.light.beans.RESTParameters;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import org.example.nkeiter.contentlet.rest.light.beans.RESTParameters;
+import org.example.nkeiter.contentlet.rest.light.log.Logger;
 
 public class RestOptions
 {
