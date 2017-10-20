@@ -17,6 +17,8 @@ public enum RESTParameters
 	INODE    ( "inode" ),
 	INCLUDE_FIELDS  ( "include-fields" );
 
+	public static Class<RESTParameters> clazz = RESTParameters.class;
+
 	private final String value;
 
 	RESTParameters( String value )

@@ -2,6 +2,8 @@ package org.example.nkeiter.generic.database;
 
 public class SelfParsingBeanSQL
 {
+	public static Class<SelfParsingBeanSQL> clazz = SelfParsingBeanSQL.class;
+
 	public static String GET_MY_DB_TABLE_ITEM_BY_STRING_DB_FIELD_SQL = ""
 			+ "select "
 			+ "  * "

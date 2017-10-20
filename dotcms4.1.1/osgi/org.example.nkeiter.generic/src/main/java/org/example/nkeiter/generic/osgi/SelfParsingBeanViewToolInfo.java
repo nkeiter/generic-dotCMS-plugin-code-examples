@@ -8,6 +8,8 @@ import org.example.nkeiter.generic.viewtool.SelfParsingBeanViewTool;
 
 public class SelfParsingBeanViewToolInfo extends ServletToolInfo
 {
+	public static Class<SelfParsingBeanViewToolInfo> clazz = SelfParsingBeanViewToolInfo.class;
+
 	@Override
 	public String getClassname()
 	{

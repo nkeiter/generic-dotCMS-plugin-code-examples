@@ -2,6 +2,8 @@ package org.example.nkeiter.quartz.job.killer.beans;
 
 public class QuartzJobBean
 {
+	public static Class<QuartzJobBean> clazz = QuartzJobBean.class;
+
 	private String jobName;
 	private String jobGroup;
 

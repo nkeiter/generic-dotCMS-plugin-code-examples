@@ -20,6 +20,8 @@ import org.osgi.framework.BundleContext;
 
 public class Activator extends GenericBundleActivator
 {
+	public static Class<Activator> clazz = Activator.class;
+
 	private LoggerContext pluginLoggerContext;
 
 	private static final String PLUGIN_NAME = "Quartz Job Killer";

@@ -13,6 +13,8 @@ import org.example.nkeiter.generic.log.Logger;
 
 public class SelfParsingBeanStorage
 {
+	public static final Class<SelfParsingBeanStorage> clazz = SelfParsingBeanStorage.class;
+
 	@SuppressWarnings( "unchecked" )
 	public static List<SelfParsingBean> getMyDbTableItemByStringDbField( String stringField, int maxResults )
 	{
@@ -20,7 +22,7 @@ public class SelfParsingBeanStorage
 
 		try
 		{
-			Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
+			Logger.info( clazz, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )" );
 
 			SelfParsingBean selfParsingBean = new SelfParsingBean();
 			DotConnect dotConnect = new DotConnect();
@@ -39,7 +41,7 @@ public class SelfParsingBeanStorage
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )", exception );
+			Logger.error( clazz, "SelfParsingBeanStorage.getMyDbTableItemByStringDbField( String, int )", exception );
 		}
 		finally
 		{
@@ -56,7 +58,7 @@ public class SelfParsingBeanStorage
 
 		try
 		{
-			Logger.info( SelfParsingBeanStorage.class, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )" );
+			Logger.info( clazz, "Got to SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )" );
 
 			SelfParsingBean selfParsingBean = new SelfParsingBean();
 			DotConnect dotConnect = new DotConnect();
@@ -75,7 +77,7 @@ public class SelfParsingBeanStorage
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanStorage.class, "SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )", exception );
+			Logger.error( clazz, "SelfParsingBeanStorage.getMyDbTableItemByStringDbFieldJSON( String, int )", exception );
 		}
 		finally
 		{

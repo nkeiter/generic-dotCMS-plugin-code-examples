@@ -6,6 +6,8 @@ import org.example.nkeiter.quartz.job.killer.beans.QuartzJobBean;
 
 public class QuartzJobKillerConfiguration
 {
+	public static Class<QuartzJobKillerConfiguration> clazz = QuartzJobKillerConfiguration.class;
+
 	// Pre-loaded dotCMS jobs
 	public static final String DOTCMS_JOB_GROUP = "dotcms_jobs";
 	public static final QuartzJobBean BINARY_CLEANUP_JOB = new QuartzJobBean( "BinaryCleanupJob", DOTCMS_JOB_GROUP );

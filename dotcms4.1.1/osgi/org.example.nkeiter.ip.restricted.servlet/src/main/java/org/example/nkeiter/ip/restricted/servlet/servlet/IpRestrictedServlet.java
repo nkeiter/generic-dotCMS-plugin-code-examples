@@ -14,6 +14,8 @@ import org.example.nkeiter.ip.restricted.servlet.log.Logger;
 
 public class IpRestrictedServlet extends HttpServlet 
 {
+	public static Class<IpRestrictedServlet> clazz = IpRestrictedServlet.class;
+
 	private static final long serialVersionUID = 1L;
 
 	private static final List<String> ALLOWED_IP_LIST;
@@ -59,7 +61,7 @@ public class IpRestrictedServlet extends HttpServlet
 		try
 		{
 			String ipAddress = httpServletRequest.getRemoteAddr();
-			Logger.info( IpRestrictedServlet.class, "IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse ) Requestor IP Address = "  + ipAddress );
+			Logger.info( clazz, "IpRestrictedServlet.service( HttpServletRequest, HttpServletResponse ) Requestor IP Address = "  + ipAddress );
 
 			if ( !ALLOWED_IP_LIST.contains( ipAddress ) )
 			{

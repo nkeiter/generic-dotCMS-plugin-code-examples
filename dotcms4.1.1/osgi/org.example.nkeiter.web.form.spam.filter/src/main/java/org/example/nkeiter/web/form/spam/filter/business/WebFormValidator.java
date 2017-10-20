@@ -10,6 +10,8 @@ import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormValidator
 {
+	public static final Class<WebFormValidator> clazz = WebFormValidator.class;
+
 	public static WebFormValidatorBean isValidWebForm( HttpServletRequest httpServletRequest )
 	{
 		WebFormValidatorBean webFormValidatorBean = new WebFormValidatorBean();
@@ -53,7 +55,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.isValidWebForm( HttpServletRequest )", exception );
+			Logger.error( clazz, "WebFormValidator.isValidWebForm( HttpServletRequest )", exception );
 
 			webFormValidatorBean.setValid( false );
 			webFormValidatorBean.setReason( "Exception: " + exception + "." );
@@ -75,21 +77,21 @@ public class WebFormValidator
 			{
 				if ( requestURI.matches( regex ) )
 				{
-					Logger.info(WebFormValidator.class, "isWebForm = true for URI " + requestURI );
+					Logger.info(clazz, "isWebForm = true for URI " + requestURI );
 
 					return true;
 				}
 			}
 
 			// Requirements have not been satisfied.
-			Logger.info(WebFormValidator.class, "isWebForm = false for URI " + requestURI );
+			Logger.info(clazz, "isWebForm = false for URI " + requestURI );
 
 			return false;
 		}
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
+			Logger.error( clazz, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}
@@ -118,7 +120,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
+			Logger.error( clazz, "WebFormValidator.checkField( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}
@@ -156,7 +158,7 @@ public class WebFormValidator
 		catch ( Exception exception )
 		{
 			// Something went wrong.
-			Logger.error( WebFormValidator.class, "WebFormValidator.checkFieldGroup( HashMap<String, Object>, String )", exception );
+			Logger.error( clazz, "WebFormValidator.checkFieldGroup( HashMap<String, Object>, String )", exception );
 
 			return false;
 		}

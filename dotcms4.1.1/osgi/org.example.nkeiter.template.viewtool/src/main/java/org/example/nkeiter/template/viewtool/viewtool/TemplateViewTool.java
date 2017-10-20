@@ -13,6 +13,8 @@ import org.example.nkeiter.template.viewtool.log.Logger;
 
 public class TemplateViewTool implements ViewTool
 {
+	public static Class<TemplateViewTool> clazz = TemplateViewTool.class;
+
 	/**
 	 * Returns a template object.
 	 * 
@@ -33,7 +35,7 @@ public class TemplateViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( TemplateViewTool.class, "TemplateViewTool.getTemplate( String )", exception );
+			Logger.error( clazz, "TemplateViewTool.getTemplate( String )", exception );
 		}
 
 		return template;

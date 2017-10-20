@@ -16,6 +16,8 @@ import org.example.nkeiter.contentlet.rest.light.log.Logger;
 
 public class RestOptions
 {
+	public static Class<RestOptions> clazz = RestOptions.class;
+
 	User user = null;
 	String query = "";
 	String id = "";

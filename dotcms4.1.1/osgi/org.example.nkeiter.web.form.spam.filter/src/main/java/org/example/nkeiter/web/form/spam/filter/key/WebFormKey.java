@@ -2,6 +2,8 @@ package org.example.nkeiter.web.form.spam.filter.key;
 
 public class WebFormKey
 {
+	public static Class<WebFormKey> clazz = WebFormKey.class;
+
 	/** Form Field Documentation
 	 * 
 	 * -- Form Configuration --

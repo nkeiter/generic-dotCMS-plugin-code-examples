@@ -4,7 +4,7 @@ Bundle-Description: nkeiter - Web Form Spam Filter Servlet (/dotCMS/su
 Bundle-SymbolicName: Web Form Spam Filter Servlet (/dotCMS/submitWebFo
  rm /dotCMS/sendEmail)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1508254960000
+Bnd-LastModified: 1508504622000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

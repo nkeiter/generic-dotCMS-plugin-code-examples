@@ -4,6 +4,8 @@ import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class SendEmailServlet extends WebFormServlet
 {
+	public static Class<SendEmailServlet> clazz = SendEmailServlet.class;
+
 	private static final long serialVersionUID = 1L;
 
 	public SendEmailServlet()

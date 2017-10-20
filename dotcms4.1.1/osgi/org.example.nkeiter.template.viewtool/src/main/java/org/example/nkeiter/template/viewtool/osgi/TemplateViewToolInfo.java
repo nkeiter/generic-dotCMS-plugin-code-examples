@@ -8,6 +8,8 @@ import org.example.nkeiter.template.viewtool.viewtool.TemplateViewTool;
 
 public class TemplateViewToolInfo extends ServletToolInfo
 {
+	public static Class<TemplateViewToolInfo> clazz = TemplateViewToolInfo.class;
+
 	@Override
 	public String getClassname()
 	{

@@ -4,7 +4,7 @@ Bundle-Description: nkeiter - Ip Restricted Servlet (/servlets/ipRestr
 Bundle-SymbolicName: Ip Restricted Servlet (/servlets/ipRestrictedServ
  let)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1508254941000
+Bnd-LastModified: 1508504604000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

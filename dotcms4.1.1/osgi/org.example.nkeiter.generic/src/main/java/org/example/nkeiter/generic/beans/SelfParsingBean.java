@@ -8,8 +8,10 @@ import java.util.Map;
 
 import org.example.nkeiter.generic.log.Logger;
 
-public class SelfParsingBean 
+public class SelfParsingBean
 {
+	public static final Class<SelfParsingBean> clazz = SelfParsingBean.class;
+
 	private double doubleField;
 	private String stringField;
 
@@ -61,7 +63,7 @@ public class SelfParsingBean
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBean.class, "SelfParsingBean.createList( List<Map<String,Object>>, int )", exception );
+			Logger.error( clazz, "SelfParsingBean.createList( List<Map<String,Object>>, int )", exception );
 		}
 
 		return selfParsingBeanList;

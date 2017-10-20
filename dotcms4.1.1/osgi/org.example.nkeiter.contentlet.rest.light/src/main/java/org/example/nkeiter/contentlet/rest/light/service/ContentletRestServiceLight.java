@@ -55,6 +55,8 @@ import org.example.nkeiter.contentlet.rest.light.log.Logger;
 @Path( "/contentletLight" )
 public class ContentletRestServiceLight extends BasicRestService
 {
+	public static Class<ContentletRestServiceLight> clazz = ContentletRestServiceLight.class;
+
 	private static JSONObject contentletToJson( Contentlet contentlet, RestOptions restOptions ) throws JSONException
 	{
 		JSONObject jsonObject = new JSONObject();
@@ -89,7 +91,7 @@ public class ContentletRestServiceLight extends BasicRestService
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( ContentletRestServiceLight.class, "Error converting contentlet to JSON.", exception );
+			Logger.error( clazz, "Error converting contentlet to JSON.", exception );
 		}
 
 		return jsonObject;
@@ -113,7 +115,7 @@ public class ContentletRestServiceLight extends BasicRestService
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( ContentletRestServiceLight.class, "Error converting contentlets to JSONArray.", exception );
+			Logger.error( clazz, "Error converting contentlets to JSONArray.", exception );
 		}
 
 		return jsonArray;
@@ -143,15 +145,15 @@ public class ContentletRestServiceLight extends BasicRestService
 		{
 			if ( restOptions.isIdPassed() )
 			{
-				Logger.warn( ContentletRestServiceLight.class, "Can't find Content with Identifier: " + restOptions.getId(), exception );
+				Logger.warn( clazz, "Can't find Content with Identifier: " + restOptions.getId(), exception );
 			}
 			else if ( restOptions.isInodePassed() )
 			{
-				Logger.warn( ContentletRestServiceLight.class, "Can't find Content with Inode: " + restOptions.getInode(), exception );
+				Logger.warn( clazz, "Can't find Content with Inode: " + restOptions.getInode(), exception );
 			}
 			else if ( restOptions.isQueryPassed() )
 			{
-				Logger.warn( ContentletRestServiceLight.class, "Error searching Content : " + exception.getMessage(), exception );
+				Logger.warn( clazz, "Error searching Content : " + exception.getMessage(), exception );
 			}
 		}
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-Description: nkeiter - Template ViewTool ($templateViewTool)
 Bundle-SymbolicName: Template ViewTool ($templateViewTool)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1508254953000
+Bnd-LastModified: 1508504616000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

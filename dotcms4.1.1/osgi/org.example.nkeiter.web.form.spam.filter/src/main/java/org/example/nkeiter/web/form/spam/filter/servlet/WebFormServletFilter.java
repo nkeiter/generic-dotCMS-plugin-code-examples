@@ -17,6 +17,8 @@ import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormServletFilter implements Filter
 {
+	public static Class<WebFormServletFilter> clazz = WebFormServletFilter.class;
+
 	private String originalEndpoint = "";
 	private String originalReferer = "";
 

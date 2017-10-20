@@ -16,6 +16,8 @@ import org.example.nkeiter.generic.log.Logger;
 
 public class SelfParsingBeanViewTool implements ViewTool
 {
+	public static final Class<SelfParsingBeanViewTool> clazz = SelfParsingBeanViewTool.class;
+
 	/**
 	 * Example to pull one record.
 	 * Usually by primary key field(s)
@@ -42,7 +44,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemByStringDbField( String )", exception );
+			Logger.error( clazz, "SelfParsingBeanViewTool.getMyDbTableItemByStringDbField( String )", exception );
 		}
 
 		return selfParsingBean;
@@ -78,7 +80,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbField( String, int )", exception );
+			Logger.error( clazz, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbField( String, int )", exception );
 		}
 
 		return list;
@@ -109,7 +111,7 @@ public class SelfParsingBeanViewTool implements ViewTool
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( SelfParsingBeanViewTool.class, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbFieldJSON( String )", exception );
+			Logger.error( clazz, "SelfParsingBeanViewTool.getMyDbTableItemListByStringDbFieldJSON( String )", exception );
 		}
 
 		return searchReturn;

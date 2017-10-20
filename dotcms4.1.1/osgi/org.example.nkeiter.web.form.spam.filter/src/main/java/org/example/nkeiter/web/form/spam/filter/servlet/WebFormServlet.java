@@ -17,6 +17,8 @@ import org.example.nkeiter.web.form.spam.filter.log.Logger;
 
 public class WebFormServlet extends HttpServlet
 {
+	public static final Class<WebFormServlet> clazz = WebFormServlet.class;
+
 	private static final long serialVersionUID = 1L;
 
 	private String originalEndpoint = "";
@@ -77,7 +79,7 @@ public class WebFormServlet extends HttpServlet
 
 			actionMapping.addForwardConfig( forwardConfig );
 
-			Logger.info( WebFormServlet.class, "Referer " + httpServletRequest.getHeader( "referer" ) );
+			Logger.info( clazz, "Referer " + httpServletRequest.getHeader( "referer" ) );
 
 			/*
 			 * ActionForm can be null.
@@ -88,14 +90,14 @@ public class WebFormServlet extends HttpServlet
 			// Send the user to the specified location.
 			if ( actionForward.getRedirect() )
 			{
-				Logger.info( WebFormServlet.class, "Redirecting to " + actionForward.getPath() );
+				Logger.info( clazz, "Redirecting to " + actionForward.getPath() );
 
 				// Redirect for continued processing
 				httpServletResponse.sendRedirect( actionForward.getPath() );
 			}
 			else
 			{
-				Logger.info( WebFormServlet.class, "Forwarding to " + actionForward.getPath() );
+				Logger.info( clazz, "Forwarding to " + actionForward.getPath() );
 
 				// Forward for continued processing
 				RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher( actionForward.getPath() );
@@ -105,7 +107,7 @@ public class WebFormServlet extends HttpServlet
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( WebFormServlet.class, "WebFormServlet.service( HttpServletRequest, HttpServletResponse ) originalEndpoint [" + this.originalEndpoint + "] originalReferer [" + this.originalReferer + "]", exception );
+			Logger.error( clazz, "WebFormServlet.service( HttpServletRequest, HttpServletResponse ) originalEndpoint [" + this.originalEndpoint + "] originalReferer [" + this.originalReferer + "]", exception );
 		}
 	}
 

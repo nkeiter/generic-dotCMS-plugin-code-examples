@@ -4,7 +4,7 @@ Bundle-Description: nkeiter - Contentlet Rest Service Light (/api/cont
 Bundle-SymbolicName: Contentlet Rest Service Light (/api/contentletLig
  ht)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1508254921000
+Bnd-LastModified: 1508504581000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

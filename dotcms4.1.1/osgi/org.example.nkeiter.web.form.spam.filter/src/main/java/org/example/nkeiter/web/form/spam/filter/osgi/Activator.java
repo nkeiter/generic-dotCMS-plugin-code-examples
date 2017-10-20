@@ -19,6 +19,8 @@ import org.osgi.framework.ServiceReference;
 
 public class Activator extends GenericBundleActivator
 {
+	public static Class<Activator> clazz = Activator.class;
+
 	private LoggerContext pluginLoggerContext;
 
 	private static final String PLUGIN_NAME = "Web Form Spam Filter Servlet (/dotCMS/submitWebForm /dotCMS/sendEmail)";
@@ -45,7 +47,7 @@ public class Activator extends GenericBundleActivator
 		LoggerContext dotcmsLoggerContext = Log4jUtil.getLoggerContext();
 
 		// Initialing the log4j context of this plugin based on the dotCMS logger context
-		this.pluginLoggerContext = (LoggerContext) LogManager.getContext( this.getClass().getClassLoader(), false, dotcmsLoggerContext, dotcmsLoggerContext.getConfigLocation() );
+		this.pluginLoggerContext = (LoggerContext) LogManager.getContext( clazz.getClassLoader(), false, dotcmsLoggerContext, dotcmsLoggerContext.getConfigLocation() );
 
 		Logger.info( this, "Got to start( BundleContext ) " + PLUGIN_NAME );
 

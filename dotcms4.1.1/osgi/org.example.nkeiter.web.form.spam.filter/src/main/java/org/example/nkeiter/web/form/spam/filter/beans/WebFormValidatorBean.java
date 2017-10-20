@@ -2,6 +2,8 @@ package org.example.nkeiter.web.form.spam.filter.beans;
 
 public class WebFormValidatorBean
 {
+	public static Class<WebFormValidatorBean> clazz = WebFormValidatorBean.class;
+
 	private boolean valid = false;
 	private String reason = "";
 

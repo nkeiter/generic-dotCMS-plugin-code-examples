@@ -4,7 +4,7 @@ Bundle-Description: nkeiter - Self Parsing Bean ViewTool ($selfParsing
 Bundle-SymbolicName: Self Parsing Bean ViewTool ($selfParsingBeanViewT
  ool)
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1508254935000
+Bnd-LastModified: 1508504594000
 Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
  xamples
 Bundle-Vendor: nkeiter

@@ -13,6 +13,8 @@ import org.example.nkeiter.ip.restricted.servlet.log.Logger;
 
 public class IpRestrictedServletFilter implements Filter
 {
+	public static Class<IpRestrictedServletFilter> clazz = IpRestrictedServletFilter.class;
+
 	public IpRestrictedServletFilter()
 	{
 		Logger.info( this, "Got to IpRestrictedServletFilter()" );

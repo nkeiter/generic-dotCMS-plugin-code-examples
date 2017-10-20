@@ -13,6 +13,8 @@ import com.dotmarketing.util.json.JSONObject;
 @Path( "/contentletLight" )
 public class BasicRestService
 {
+	public static Class<BasicRestService> clazz = BasicRestService.class;
+
 	protected final WebResource webResource = new WebResource();
 
 	protected static Response respond( JSONArray jsonArray )

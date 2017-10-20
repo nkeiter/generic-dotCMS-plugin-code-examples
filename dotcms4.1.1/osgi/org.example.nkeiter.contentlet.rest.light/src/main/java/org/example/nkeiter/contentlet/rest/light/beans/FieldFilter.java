@@ -13,6 +13,8 @@ import org.example.nkeiter.contentlet.rest.light.log.Logger;
  */
 public class FieldFilter
 {
+	public static Class<FieldFilter> clazz = FieldFilter.class;
+
 	private String field = "";
 
 	public FieldFilter ( String field )
@@ -51,7 +53,7 @@ public class FieldFilter
 		}
 		catch ( Exception exception )
 		{
-			Logger.error( FieldFilter.class, "Error parsing field filters", exception );
+			Logger.error( clazz, "Error parsing field filters", exception );
 		}
 
 		return list;
