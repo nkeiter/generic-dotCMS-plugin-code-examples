@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-Description: nkeiter - Login As Dispatch Action (/loginAs /logo
+ utAs)
+Bundle-SymbolicName: Login As Dispatch Action (/loginAs /logoutAs)
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1526437125000
+Bundle-DocURL: https://github.com/nkeiter/generic-dotCMS-plugin-code-e
+ xamples
+Bundle-Vendor: nkeiter
+Import-Package: com.dotcms.repackage.org.apache.logging.log4j;version=
+ 0,com.dotcms.repackage.org.apache.logging.log4j.core;version=0,com.do
+ tcms.repackage.org.apache.logging.log4j.spi;version=0,com.dotcms.repa
+ ckage.org.apache.struts.action;version=0,com.dotmarketing.business;ve
+ rsion=0,com.dotmarketing.loggers;version=0,com.dotmarketing.osgi;vers
+ ion=0,com.dotmarketing.util;version=0,com.liferay.portal;version=0,co
+ m.liferay.portal.ejb;version=0,com.liferay.portal.model;version=0,jav
+ ax.servlet;version=0,javax.servlet.http;version=0,org.apache.felix.ht
+ tp.api;version=0,org.example.nkeiter.login.as.business;version=0,org.
+ example.nkeiter.login.as.key;version=0,org.example.nkeiter.login.as.l
+ og;version=0,org.example.nkeiter.login.as.security;version=0,org.exam
+ ple.nkeiter.login.as.servlet;version=0,org.osgi.framework;version=0,o
+ rg.osgi.service.http;version=0,org.osgi.util.tracker;version=0
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+DynamicImport-Package: *
+Tool: Bnd-3.4.0.201707252008
+Export-Package: org.example.nkeiter.login.as.business;version="1.0";us
+ es:="com.liferay.portal.model,javax.servlet.http",org.example.nkeiter
+ .login.as.key;version="1.0",org.example.nkeiter.login.as.log;version=
+ "1.0";uses:="com.dotmarketing.util",org.example.nkeiter.login.as.osgi
+ ;version="1.0";uses:="com.dotmarketing.osgi,org.osgi.framework",org.e
+ xample.nkeiter.login.as.security;version="1.0";uses:="com.liferay.por
+ tal.model,javax.servlet.http",org.example.nkeiter.login.as.servlet;ve
+ rsion="1.0";uses:="javax.servlet,javax.servlet.http"
+Bundle-Name: Login As Dispatch Action (/loginAs /logoutAs)
+Bundle-Version: 1.0
+Bundle-Activator: org.example.nkeiter.login.as.osgi.Activator
+Created-By: 1.8.0_121 (Oracle Corporation)
+
